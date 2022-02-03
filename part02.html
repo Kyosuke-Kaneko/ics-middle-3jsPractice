@@ -70,6 +70,8 @@
         function handleMouseMove(event) {
           const element = event.currentTarget;
           // canvas要素上のXY座標
+          // マウスカーソル座標（client） - 親から子要素をまでの座標
+          // https://qiita.com/yukiB/items/31a9e9e600dfb1f34f76
           const x = event.clientX - element.offsetLeft;
           const y = event.clientY - element.offsetTop;
           // canvas要素の幅・高さ
@@ -86,7 +88,7 @@
           // レイキャスト = マウス位置からまっすぐに伸びる光線ベクトルを生成
           raycaster.setFromCamera(mouse, camera);
 
-          // その光線とぶつかったオブジェクトを得る
+          // その光線とぶつかったオブジェクトを得て配列に入れる
           const intersects = raycaster.intersectObjects(meshList);
 
           meshList.map((mesh) => {
