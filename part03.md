@@ -5,6 +5,10 @@
 
 3D空間にたくさんの粒子を配置するだけで、空間の距離感など雰囲気がでる。
 
+[https://threejs.org/docs/#api/en/objects/Points](https://threejs.org/docs/#api/en/objects/Points)
+
+[https://threejs.org/docs/#api/en/materials/PointsMaterial](https://threejs.org/docs/#api/en/materials/PointsMaterial)
+
 ## 設定方法
 ①頂点を格納する配列を作成する
 
