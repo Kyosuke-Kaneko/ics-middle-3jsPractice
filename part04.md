@@ -38,4 +38,10 @@ for (let i = 0; i < CELL_NUM; i++) {
 }
 ```
 
-Three.jsでは、THREE.BufferGeometryUtils.mergeBufferGeometries()メソッドで結合できます。このメソッドはThree.js本体のコードに含まれていないので注意ください。公式GitHubのexamples/js/utilsフォルダーにJavaScriptファイルがあるので、これをscript要素で読み込みます。作業用フォルダーにBufferGeometryUtils.jsファイルをコピーしておきましょう。該当ファイルはこちらからダウンロードできます。
+Three.jsでは、THREE.BufferGeometryUtils.mergeBufferGeometries()メソッドで結合できます。このメソッドはThree.js本体のコードに含まれていないので注意ください。<br>
+公式GitHubのexamples/js/utilsフォルダーにJavaScriptファイルがあるので、これをscript要素で読み込みます。作業用フォルダーにBufferGeometryUtils.jsファイルをコピーしておきましょう。
+
+## デメリット
+ジオメトリをまとめてしまうと、3Dオブジェクト（Meshのインスタンス）としては1つになります。そのため、個別にマテリアルを設定したりマウスイベントを設定することができなくなります。
+
+インタラクションをしないもの、アニメーションしないものを対象に、このテクニックを適用するといいでしょう。

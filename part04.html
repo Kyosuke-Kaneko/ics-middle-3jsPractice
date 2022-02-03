@@ -45,12 +45,12 @@
                 10 * (k - CELL_NUM / 2)
               );
 
-              // ジオメトリを保存
+              // 結合用ジオメトリの配列に保存
               boxes.push(geometryTranslated);
             }
           }
         }
-        // ジオメトリを生成
+        // 配列からジオメトリを生成
         const geometry = THREE.BufferGeometryUtils.mergeBufferGeometries(boxes);
 
         // マテリアルを作成
